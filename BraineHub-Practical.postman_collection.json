@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "67b74835-69b6-409a-bc2d-a029cabdd850",
+		"name": "BraineHub-Practical",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API-Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"test@gmail.com\",\r\n    \"password\" : \"Admin@123\",\r\n    \"age\" : 29.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"brainerhub@gmail.com\",\r\n    \"password\" : \"Admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Add-Loan-By-Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicmFpbmVyaHViQGdtYWlsLmNvbSIsImp0aSI6IjEiLCJzY29wZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjcwMjY2MDE3LCJleHAiOjE2NzAyODQwMTd9.qn9-y3VIIjp1rmGOrMXCDkE1NXUvTPStDfqOegLUP_I"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanName\" : \"Computer Loan\",\r\n    \"loanAmount\" : 56500.75,\r\n    \"loanTerm\" : \"1 Years\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/admin/addLoan"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Get-All-Applied-Loan-Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicmFpbmVyaHViQGdtYWlsLmNvbSIsImp0aSI6IjEiLCJzY29wZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjcwMjY2MDE3LCJleHAiOjE2NzAyODQwMTd9.qn9-y3VIIjp1rmGOrMXCDkE1NXUvTPStDfqOegLUP_I"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8081/api/admin/allAppliedLoan"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Apply-Loan-By-User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWplc2hAZ21haWwuY29tIiwianRpIjoiMiIsInNjb3BlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTY3MDI2NTA1OCwiZXhwIjoxNjcwMjgzMDU4fQ.YaPFIOANnbOG9cqRVBhwZbQa7gSUemqfQrxPUbJDZMY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"loan\" : {\r\n        \"id\" : 4\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/user/applyLoan"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Get-Applied-All-Loan-Of-User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWplc2hAZ21haWwuY29tIiwianRpIjoiMiIsInNjb3BlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTY3MDI2NTA1OCwiZXhwIjoxNjcwMjgzMDU4fQ.YaPFIOANnbOG9cqRVBhwZbQa7gSUemqfQrxPUbJDZMY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8081/api/user/getAppliedLoans"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Get-Applied-Loan-By-AppliedLoinId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWplc2hAZ21haWwuY29tIiwianRpIjoiMiIsInNjb3BlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTY3MDI2NTA1OCwiZXhwIjoxNjcwMjgzMDU4fQ.YaPFIOANnbOG9cqRVBhwZbQa7gSUemqfQrxPUbJDZMY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8081/api/user/getAppliedLoanUser/3"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Loan-Approved/Declined-By-Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicmFpbmVyaHViQGdtYWlsLmNvbSIsImp0aSI6IjEiLCJzY29wZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjcwMjY2MDE3LCJleHAiOjE2NzAyODQwMTd9.qn9-y3VIIjp1rmGOrMXCDkE1NXUvTPStDfqOegLUP_I"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "status",
+						"value": "true",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": "localhost:8081/api/admin/loanApproveOrDeclined/1/user/2/status/true"
+			},
+			"response": []
+		}
+	]
+}
