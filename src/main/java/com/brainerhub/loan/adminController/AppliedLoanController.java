@@ -35,7 +35,6 @@ public class AppliedLoanController {
 
     @PostMapping("/addLoan")
     public ResponseEntity<GenericResponse> addLoanByAdmin(@Validated @RequestBody Loan loan) {
-        System.out.println("AddLon Controller");
         return ResponseEntity.ok(loanService.addLoan(loan));
     }
 }

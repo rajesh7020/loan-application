@@ -34,7 +34,7 @@ public class TokenProvider implements Serializable {
         return getClaimFromToken(token, Claims::getExpiration);
     }
 
-    public String getMembersIdFromToken(String token) {
+    public String getIdFromToken(String token) {
         return getClaimFromToken(token, Claims::getId);
     }
 

@@ -68,12 +68,12 @@ public class CustomExceptionHandler {
         return ResponseEntity.ok(APIResponseBuilder.build(Boolean.FALSE, e.getMessage(), HttpStatus.FORBIDDEN));
     }
 
-/*    @ExceptionHandler(RuntimeException.class)
+    @ExceptionHandler(RuntimeException.class)
     @ResponseBody
     public ResponseEntity<GenericResponse> getRuntimeException() {
         return ResponseEntity
                 .ok(APIResponseBuilder.build(Boolean.FALSE, "Error runtime exception", HttpStatus.NOT_FOUND));
-    }*/
+    }
 
     @ExceptionHandler(NoHandlerFoundException.class)
     @ResponseBody
