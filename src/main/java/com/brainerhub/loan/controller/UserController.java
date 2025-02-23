@@ -2,7 +2,6 @@ package com.brainerhub.loan.controller;
 
 import com.brainerhub.loan.commonutil.Constant;
 import com.brainerhub.loan.config.TokenProvider;
-import com.brainerhub.loan.entity.AppliedLoan;
 import com.brainerhub.loan.entity.User;
 import com.brainerhub.loan.repository.UserRepository;
 import com.brainerhub.loan.requestDto.UserReqDto;
@@ -21,7 +20,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

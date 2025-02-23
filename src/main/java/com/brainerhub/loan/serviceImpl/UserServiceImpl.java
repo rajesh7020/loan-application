@@ -1,27 +1,19 @@
 package com.brainerhub.loan.serviceImpl;
 
 import com.brainerhub.loan.commonutil.Constant;
-import com.brainerhub.loan.config.TokenProvider;
-import com.brainerhub.loan.entity.Role;
 import com.brainerhub.loan.entity.User;
 import com.brainerhub.loan.repository.RoleRepository;
 import com.brainerhub.loan.repository.UserRepository;
-import com.brainerhub.loan.requestDto.UserReqDto;
 import com.brainerhub.loan.responseDto.APIResponseBuilder;
 import com.brainerhub.loan.responseDto.GenericResponse;
 import com.brainerhub.loan.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
